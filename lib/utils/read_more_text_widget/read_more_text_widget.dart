@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../_base/widgets/base_stateful_widget.dart';
+import '../../_base/base_widgets/base_stateful_widget.dart';
 import '../locale/app_localization_keys.dart';
 
 

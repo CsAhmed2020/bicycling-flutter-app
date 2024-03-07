@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../_base/widgets/base_stateless_widget.dart';
+import '../../_base/base_widgets/base_stateless_widget.dart';
 import '../../res/app_asset_paths.dart';
 import '../extensions/extension_colors.dart';
 import '../locale/app_localization_keys.dart';

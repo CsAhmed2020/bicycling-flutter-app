@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../_base/widgets/base_stateless_widget.dart';
+import '../../_base/base_widgets/base_stateless_widget.dart';
 import '../locale/app_localization_keys.dart';
 
 // ignore: must_be_immutable
