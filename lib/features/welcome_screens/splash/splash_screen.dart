@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:bicycling_app/features/splash/bloc/splash_bloc.dart';
-import 'package:bicycling_app/features/splash/bloc/splash_repository.dart';
+import 'package:bicycling_app/features/welcome_screens/splash/bloc/splash_bloc.dart';
+import 'package:bicycling_app/features/welcome_screens/splash/bloc/splash_repository.dart';
 import 'package:bicycling_app/utils/preferences/preferences_manager.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -9,9 +9,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../_base/base_widgets/base_stateful_screen_widget.dart';
-import '../../apis/_base/dio_api_manager.dart';
-import '../../res/app_asset_paths.dart';
+import 'package:bicycling_app/_base/base_widgets/base_stateful_screen_widget.dart';
+import 'package:bicycling_app/apis/_base/dio_api_manager.dart';
+import 'package:bicycling_app/res/app_asset_paths.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = '/splash';
@@ -19,6 +19,7 @@ class SplashScreen extends StatelessWidget {
   SplashScreen({Key? key}) : super(key: key);
 
   final DioApiManager dioApiManager = GetIt.I<DioApiManager>();
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider<SplashBloc>(
@@ -44,9 +45,6 @@ class _SplashScreenWithBlocState extends BaseScreenState<SplashScreenWithBloc> {
   @override
   void initState() {
     super.initState();
-    _getAreaList();
-
-    /// to start time to switch to another screen
     _startTime();
   }
 
@@ -54,9 +52,6 @@ class _SplashScreenWithBlocState extends BaseScreenState<SplashScreenWithBloc> {
   Widget baseScreenBuild(BuildContext context) {
     return BlocListener<SplashBloc, SplashState>(
       listener: (context, state) {
-        // if (state is AreaLoadedState) {
-        //   _navigationPage();
-        // }
       },
       child: Scaffold(
         body: _backgroundImage(),
@@ -88,13 +83,14 @@ class _SplashScreenWithBlocState extends BaseScreenState<SplashScreenWithBloc> {
 
   SplashBloc get currentBloc => BlocProvider.of<SplashBloc>(context);
 
-  void _getAreaList() {
-    currentBloc.add(GetAreaListApi());
+  void _getDataApiEvent() {
+    currentBloc.add(GetDataApi());
   }
 
   /// navigate to next screen
   Future<void> _navigationPage() async {
-    try {
+    _openOnBoardingScreen();
+    /*try {
       bool isLogged = await preferencesManager.isLoggedIn();
       if (isLogged) {
         _openHomeScreen();
@@ -103,7 +99,11 @@ class _SplashScreenWithBlocState extends BaseScreenState<SplashScreenWithBloc> {
       }
     } catch (error) {
       _openLoginScreen();
-    }
+    }*/
+  }
+
+  void _openOnBoardingScreen() async {
+    //await Navigator.of(context).pushNamedAndRemoveUntil(BottomNavigationScreen.routeName, ((route) => false));
   }
 
   void _openLoginScreen() async {
@@ -113,4 +113,6 @@ class _SplashScreenWithBlocState extends BaseScreenState<SplashScreenWithBloc> {
   void _openHomeScreen() async {
     //await Navigator.of(context).pushNamedAndRemoveUntil(BottomNavigationScreen.routeName, ((route) => false));
   }
+
+
 }

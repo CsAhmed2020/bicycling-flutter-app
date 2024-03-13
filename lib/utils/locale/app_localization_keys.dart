@@ -50,5 +50,23 @@ class LocalizationKeys {
   static const seeLess = "see_less";
   static const seeMore = "see_more";
 
+  ////
+  static const onBoardTitle1 = "onboarding_title_1";
+  static const onBoardDescription1 = "onboarding_desc_1";
+  static const onBoardTitle2 = "onboarding_title_2";
+  static const onBoardDescription2 = "onboarding_desc_2";
+  static const onBoardTitle3 = "onboarding_title_3";
+  static const onBoardDescription3 = "onboarding_desc_3";
+  static const onBoardTitle4 = "onboarding_title_4";
+  static const onBoardDescription4 = "onboarding_desc_4";
+  static const getStarted = "get_started";
+  static const camera = "camera";
+  static const gallery = "gallery";
+  static const document = "document";
+  static const clickToUploadImage = "click_to_upload_image";
+  static const next = "next";
+  static const skip = "skip";
+  static const search = "search";
+  static const selectYourNationality = "select_your_nationality";
 
 }

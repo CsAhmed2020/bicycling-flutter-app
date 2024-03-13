@@ -7,7 +7,7 @@ sealed class SplashEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class GetAreaListApi extends SplashEvent {
+class GetDataApi extends SplashEvent {
   @override
   List<Object> get props => [];
 }
