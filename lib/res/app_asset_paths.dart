@@ -1,10 +1,10 @@
 class AppAssetPaths {
-  static const appLogo = 'assets/images/app_logo.svg';
-  static const appLogoTitle = 'assets/images/app_logo_title.png';
+  static const appLogo = 'assets/images/app_logo.png';
+  static const appLogoTitle = 'assets/images/app_logo.png';
   static const splashBackground = 'assets/images/splash_image.jpg';
   static const closeIcon = "assets/icons/close_icon.svg";
   static const onBoarding1 = 'assets/images/onboarding/scooter_1.jpg';
-  static const onBoarding2 = 'assets/images/onboarding/scooter_2.jpg';
+  static const onBoarding2 = 'assets/images/onboarding/scooter_2.jpeg';
   static const onBoarding3 = 'assets/images/onboarding/scooter_3.jpg';
   static const onBoarding4 = 'assets/images/onboarding/scooter_4.jpg';
   static const galleryPickerIcon = "assets/icons/gallery_icon.png";

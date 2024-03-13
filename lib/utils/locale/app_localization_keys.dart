@@ -23,6 +23,46 @@ class LocalizationKeys {
   static const unexpectedErrorOccurred = 'unexpected_error_occurred';
   static const somethingWentWrong = 'something_went_wrong';
   static const noData = 'no_data';
+
+  ////
+  static const fullName = 'full_name';
+  static const enterYourName = 'enter_your_name';
+  static const createPassword = "create_password";
+  static const mustBeAtLeast8Characters = "must_be_at_least_8_characters";
+  static const alreadyHaveAnAccount = "already_have_an_account";
+  static const logIn = "log_in";
+  static const onBoardTitle1 = "onboarding_title_1";
+  static const onBoardDescription1 = "onboarding_desc_1";
+  static const onBoardTitle2 = "onboarding_title_2";
+  static const onBoardDescription2 = "onboarding_desc_2";
+  static const onBoardTitle3 = "onboarding_title_3";
+  static const onBoardDescription3 = "onboarding_desc_3";
+  static const onBoardTitle4 = "onboarding_title_4";
+  static const onBoardDescription4 = "onboarding_desc_4";
+  static const getStarted = "get_started";
+  static const camera = "camera";
+  static const gallery = "gallery";
+  static const document = "document";
+  static const clickToUploadImage = "click_to_upload_image";
+  static const next = "next";
+  static const skip = "skip";
+  static const search = "search";
+  static const selectYourNationality = "select_your_nationality";
+  static const createNewPassword = "create_new_password";
+  static const pleaseEnterYourNewPasswordAndConfirm =
+      "please_enter_your_new_password_and_confirm";
+  static const newPassword = "new_password";
+  static const confirmPassword = "confirm_password";
+  static const resetPassword = "reset_password";
+  static const continuee = "continue";
+  static const resendVerificationCode = "resend_verification_code";
+  static const verification = "verification";
+  static const pleaseEnterVerificationCodeHasBeenSentToYourWhatsAppNumber =
+      "please_enter_verification_code_has_been_sent_to_your_whats_app_number";
+  static const pasteOtpCode = 'paste_otp_code';
+  static const paste = 'paste';
+  static const doYouWantToPasteThisCode = 'do_you_want_to_paste_this_code';
+  static const cancel = "cancel";
   static const required = 'required';
   static const emailInvalid = 'email_invalid';
   static const enterPhoneNumberInvalid = 'enter_phone_number_invalid';
@@ -49,24 +89,7 @@ class LocalizationKeys {
   static const readMore = 'read_more';
   static const seeLess = "see_less";
   static const seeMore = "see_more";
-
-  ////
-  static const onBoardTitle1 = "onboarding_title_1";
-  static const onBoardDescription1 = "onboarding_desc_1";
-  static const onBoardTitle2 = "onboarding_title_2";
-  static const onBoardDescription2 = "onboarding_desc_2";
-  static const onBoardTitle3 = "onboarding_title_3";
-  static const onBoardDescription3 = "onboarding_desc_3";
-  static const onBoardTitle4 = "onboarding_title_4";
-  static const onBoardDescription4 = "onboarding_desc_4";
-  static const getStarted = "get_started";
-  static const camera = "camera";
-  static const gallery = "gallery";
-  static const document = "document";
-  static const clickToUploadImage = "click_to_upload_image";
-  static const next = "next";
-  static const skip = "skip";
-  static const search = "search";
-  static const selectYourNationality = "select_your_nationality";
-
+  static const pleaseEnterYourWhatsAppToGetAVerificationCode =
+      "please_enter_your_whats_app_to_get_a_verification_code";
+  static const getOtp = "get_otp";
 }

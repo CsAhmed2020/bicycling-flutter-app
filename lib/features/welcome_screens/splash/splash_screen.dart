@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:bicycling_app/features/welcome_screens/onboarding/onboarding_screen.dart';
 import 'package:bicycling_app/features/welcome_screens/splash/bloc/splash_bloc.dart';
 import 'package:bicycling_app/features/welcome_screens/splash/bloc/splash_repository.dart';
 import 'package:bicycling_app/utils/preferences/preferences_manager.dart';
@@ -103,7 +104,8 @@ class _SplashScreenWithBlocState extends BaseScreenState<SplashScreenWithBloc> {
   }
 
   void _openOnBoardingScreen() async {
-    //await Navigator.of(context).pushNamedAndRemoveUntil(BottomNavigationScreen.routeName, ((route) => false));
+    OnBoardingScreen.open(context);
+    //await Navigator.of(context).pushNamedAndRemoveUntil(OnBoardingScreen.routeName, ((route) => false));
   }
 
   void _openLoginScreen() async {
