@@ -75,6 +75,7 @@ class _HomeScreenWithBloc extends BaseScreenState<HomeScreenWithBloc> {
           child: Column(
             children: [
               SizedBox(height: 10.h),
+              const Text("Home")
             ],
           ),
         ),

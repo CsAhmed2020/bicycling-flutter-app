@@ -1,5 +1,6 @@
 import 'package:bicycling_app/features/auth/login/screen/login_screen.dart';
 import 'package:bicycling_app/features/auth/signup/screen/sign_up_screen.dart';
+import 'package:bicycling_app/features/navigation_drawer/screen/navigation_drawer_screen.dart';
 import 'package:bicycling_app/features/welcome_screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,9 +16,7 @@ class AppRoute {
     SplashScreen.routeName: (ctx) => SplashScreen(),
     OnBoardingScreen.routeName: (ctx) => const OnBoardingScreen(),
     LoginScreen.routeName: (ctx) => LoginScreen(),
-    SignUpScreen.routeName: (ctx) => SignUpScreen()
-    /*
-
-   ,*/
+    SignUpScreen.routeName: (ctx) => SignUpScreen(),
+    DrawerNavigationScreen.routeName:(ctx) => const DrawerNavigationScreen()
   };
 }

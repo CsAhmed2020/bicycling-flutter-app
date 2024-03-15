@@ -5,6 +5,7 @@ import 'package:bicycling_app/features/auth/helper/auth_validate.dart';
 import 'package:bicycling_app/features/auth/login/screen/login_screen.dart';
 import 'package:bicycling_app/features/auth/otp/bloc/otp_bloc.dart';
 import 'package:bicycling_app/features/auth/otp/bloc/otp_repository.dart';
+import 'package:bicycling_app/features/navigation_drawer/screen/navigation_drawer_screen.dart';
 import 'package:bicycling_app/features/widgets/app_buttons/app_elevated_button.dart';
 import 'package:bicycling_app/features/widgets/app_buttons/app_text_button.dart';
 import 'package:bicycling_app/res/app_colors.dart';
@@ -330,6 +331,6 @@ class _OtpScreenWithBloc extends BaseAuthState<OtpScreenWithBloc>
   }
 
   void _openHomeScreen() {
-    //Navigator.of(context).pushNamedAndRemoveUntil(BottomNavigationScreen.routeName, ((route) => false));
+    DrawerNavigationScreen.open(context, 0);
   }
 }

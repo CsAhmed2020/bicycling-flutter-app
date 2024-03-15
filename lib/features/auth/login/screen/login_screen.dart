@@ -286,7 +286,7 @@ class _LoginScreenWithBloc extends BaseAuthState<LoginScreenWithBloc>
   }
 
   Future<void> _openOtpScreen(String uuid) async {
-    OtpScreen.open(context, uuid, openAfterCheckOtp: OpenAfterCheckOtp.loginScreen);
+    OtpScreen.open(context, uuid, openAfterCheckOtp: OpenAfterCheckOtp.homeScreen);
   }
 
   Future<void> _openRegisterScreen() async {
