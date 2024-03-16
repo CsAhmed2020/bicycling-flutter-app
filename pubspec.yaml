@@ -27,9 +27,6 @@ dependencies:
   fluttertoast: ^8.2.2
   equatable: ^2.0.5
   cached_network_image: ^3.3.0
-  package_info_plus: ^5.0.1
-  meta:
-  intl: ^0.18.0
   dropdown_button2: ^2.3.9
   flutter_screenutil: ^5.9.0
   dartz: ^0.10.1
@@ -42,7 +39,11 @@ dependencies:
   textfield_datepicker: ^0.2.0
   google_nav_bar: ^5.0.6
   carousel_slider: ^4.2.1
-  google_maps_flutter: ^2.5.3
+  google_maps_flutter: ^2.6.0
+  meta:
+  intl: ^0.18.0
+  web: ^0.5.1
+  package_info_plus: any
   syncfusion_flutter_datepicker: ^25.1.35
   expandable: ^5.0.1
   chewie: ^1.7.1

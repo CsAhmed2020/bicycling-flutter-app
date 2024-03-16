@@ -12,7 +12,6 @@ part 'login_state.dart';
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final BaseLoginRepository loginRepository;
   LoginBloc(this.loginRepository) : super(LoginInitialState()) {
-    on<StartWhatsAppSessionEvent>(_startWhatsAppSessionEvent);
     on<ValidatePhonePasswordEvent>(_validateEmailPasswordEvent);
     on<LoginWithPhonePasswordEvent>(_loginWithPhonePasswordEvent);
     on<SetAsLoggedUserEvent>(_setAsLoggedUserEvent);
@@ -53,6 +52,4 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     emit(OpenSignUpScreenState());
   }
 
-  FutureOr<void> _startWhatsAppSessionEvent(
-      StartWhatsAppSessionEvent event, Emitter<LoginState> emit) {}
 }

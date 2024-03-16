@@ -68,7 +68,6 @@ class _LoginScreenWithBloc extends BaseAuthState<LoginScreenWithBloc>
 
   @override
   void initState() {
-    _startWhatsAppSessionEvent();
     super.initState();
     if (isDebugMode()) _setDebugEmailPasswordAutomatic();
   }
@@ -252,10 +251,6 @@ class _LoginScreenWithBloc extends BaseAuthState<LoginScreenWithBloc>
   void _loginEventApi() {
     currentBloc.add(LoginWithPhonePasswordEvent(
         _phoneNumber.international.substring(1), _password));
-  }
-
-  void _startWhatsAppSessionEvent() {
-    currentBloc.add(StartWhatsAppSessionEvent());
   }
 
   void _createNewAccountClicked() {
