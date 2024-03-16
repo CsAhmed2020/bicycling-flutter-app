@@ -31,7 +31,7 @@ class PhoneNumberFormFiledWidget extends BaseStatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
 
   PhoneNumberFormFiledWidget({
-    Key? key,
+    super.key,
     required this.title,
     this.requiredTitle = true,
     required this.onSaved,
@@ -51,8 +51,7 @@ class PhoneNumberFormFiledWidget extends BaseStatelessWidget {
     this.inputFormatters,
     this.allowEmpty = false,
     this.radius = 10,
-  })  : assert(initialValue == null || controller == null),
-        super(key: key);
+  })  : assert(initialValue == null || controller == null);
 
   @override
   Widget baseBuild(BuildContext context) {
@@ -71,7 +70,6 @@ class PhoneNumberFormFiledWidget extends BaseStatelessWidget {
         Directionality(
           textDirection: TextDirection.ltr,
           child: PhoneFormField(
-            shouldFormat: false,
             controller: controller,
             autovalidateMode: autovalidateMode,
             autofillHints: const [AutofillHints.telephoneNumber],
@@ -117,14 +115,12 @@ class PhoneNumberFormFiledWidget extends BaseStatelessWidget {
             onChanged: onChanged,
             textInputAction: textInputAction,
             isCountryChipPersistent: true,
-            countryCodeStyle:
-                textTheme.bodyMedium?.copyWith(color: AppColors.formFieldText),
+            countryCodeStyle: textTheme.bodyMedium?.copyWith(color: AppColors.formFieldText),
             focusNode: focusNode,
             initialValue: initialValue,
             inputFormatters: inputFormatters,
             onSubmitted: onFieldSubmitted,
-            style:
-                textTheme.bodyMedium?.copyWith(color: AppColors.formFieldText),
+            style: textTheme.bodyMedium?.copyWith(color: AppColors.formFieldText),
           ),
         ),
       ],
@@ -134,9 +130,15 @@ class PhoneNumberFormFiledWidget extends BaseStatelessWidget {
   PhoneNumberInputValidator? _getValidator() {
     List<PhoneNumberInputValidator> validators = [];
 
+    print('V11 $validators');
     validators.add(PhoneValidator.validMobile(
         allowEmpty: allowEmpty,
         errorText: translate(LocalizationKeys.phoneNumberInvalid)));
+
+    print('V12 $validators');
+    print('V13 ${validators.isNotEmpty}');
+    print('V14 ${validators.isNotEmpty ? PhoneValidator.compose(validators) : null}');
+
     return validators.isNotEmpty ? PhoneValidator.compose(validators) : null;
   }
 }
