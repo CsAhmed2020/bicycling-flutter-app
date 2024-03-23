@@ -19,4 +19,12 @@ class HomeErrorState extends HomeState {
   List<Object> get props => [errorMassage, isLocalizationKey];
 }
 
+class HomeGetScootersSuccessfullyState extends HomeState {
+  final List<LatLng> locations;
+  const HomeGetScootersSuccessfullyState(this.locations);
+  @override
+  List<Object> get props => [locations];
+
+}
+
 

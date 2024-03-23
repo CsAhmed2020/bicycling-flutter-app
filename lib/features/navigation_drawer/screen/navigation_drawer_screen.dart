@@ -15,7 +15,7 @@ class DrawerNavigationScreen extends StatelessWidget {
         arguments: {navigationDrawerIndex: index});
   }
 
-  const DrawerNavigationScreen({Key? key}) : super(key: key);
+  const DrawerNavigationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,8 +43,7 @@ class _DrawerNavigationScreen extends BaseStatefulScreenWidget {
   final int? indexToOpen;
   final NavigationDrawerBloc blocInstance;
 
-  const _DrawerNavigationScreen(this.indexToOpen, this.blocInstance, {Key? key})
-      : super(key: key);
+  const _DrawerNavigationScreen(this.indexToOpen, this.blocInstance);
 
   @override
   BaseScreenState<BaseStatefulScreenWidget> baseScreenCreateState() =>

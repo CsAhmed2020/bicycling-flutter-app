@@ -1,4 +1,6 @@
 import 'package:bicycling_app/apis/_base/dio_api_manager.dart';
+import 'package:bicycling_app/features/home/screen/home_screen.dart';
+import 'package:bicycling_app/features/navigation_drawer/screen/navigation_drawer_screen.dart';
 import 'package:bicycling_app/features/welcome_screens/splash/splash_screen.dart';
 import 'package:bicycling_app/utils/bloc_observer/app_bloc_observer.dart';
 import 'package:bicycling_app/utils/build_type/build_type.dart';
@@ -125,7 +127,7 @@ class _MyAppState extends State<MyApp> {
                         locale: state,
                         navigatorKey: AppRoute.mainNavigatorKey,
                         routes: AppRoute.routes,
-                        home: SplashScreen(),
+                        home: const DrawerNavigationScreen(),
                       ),
                     ),
 

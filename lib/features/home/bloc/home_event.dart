@@ -7,8 +7,8 @@ sealed class HomeEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class GetXApiEvent extends HomeEvent {
-  const GetXApiEvent();
+class GetScootersLocationsApiEvent extends HomeEvent {
+  const GetScootersLocationsApiEvent();
 
   @override
   List<Object> get props => [identityHashCode(this)];
